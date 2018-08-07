@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity instruction_memory is 
+
+port (
+	read_address : in std_logic_vector(31 donwto 0);
+	instruction : out std_logic_vector(31 donwto 0)
+	);
+	
+end instruction_memory;
+
+architecture op of instruction_memory is
+
+	type rom is array (0 to 31) of std_logic_vector(31 donwto 0);
